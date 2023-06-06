@@ -1,4 +1,4 @@
-FROM OpenJDK:
+FROM openjdk
 WORKDIR /APP
 COPY . .
 
