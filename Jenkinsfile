@@ -26,7 +26,7 @@ pipeline {
 
      stage ("Build using maven") {
         steps {
-            bat 'mvn clean package'
+            bat 'mvn clean install'
         }
      }
   }
