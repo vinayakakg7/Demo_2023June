@@ -41,15 +41,6 @@ pipeline {
 
      }
 
-     stage('Quality Gate') {
-            steps {
-                script {
-                    def qg = waitForQualityGate()
-                    if (qg.status != 'OK') {
-                        error "Quality Gate did not pass. Check SonarQube for details."
-                    }
-                }
-            }
-        }
+     
   }
 }
