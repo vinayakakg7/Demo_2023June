@@ -8,7 +8,7 @@ pipeline {
 
   environment {
        GIT_BRANCH = 'main'
-       GIT_URL = ''
+       GIT_URL = 'https://github.com/vinayakakg7/Demo_2023June.git'
   }
 
   stages {
