@@ -12,9 +12,21 @@ pipeline {
   }
 
   stages {
-     stage ("Git Checkout") {
+    stage ("Git Checkout") {
         steps {
             git branch : GIT_BRANCH , url:  GIT_URL
+        }
+     }
+
+    stage ("test using maven") {
+        steps {
+            bat 'mvn test'
+        }
+     }
+
+     stage ("Build using maven") {
+        steps {
+            bat 'mvn clean package'
         }
      }
   }
